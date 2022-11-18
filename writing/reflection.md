@@ -6,18 +6,42 @@ mistakes in spelling, grammar, or the syntax of Markdown. Ultimately, the final
 version of your reflection should be a polished document that is suitable for
 publication on your web site.
 
-## Add Your Name Here
+## Xavier Grove
 
 ## Program Output
 
 ### What is the output from running the following commands?
 
-TODO: Use a fenced code block to provide the output for this command.
+```
+The contacts file contains 100 people in it! Let's get searching!
 
+  We are looking for contacts who have a job related to "engineer":
+
+  joe70@yahoo.com is a Network engineer
+  torresjames@white.info is a Electrical engineer
+  grahamjoel@castillo-gilbert.net is a Engineer, technical sales
+  gsutton@miller.com is a Engineer, maintenance
+  gharris@villarreal-snow.com is a Water engineer
+  williamsondavid@lopez.com is a Automotive engineer
+  ronald83@yahoo.com is a Maintenance engineer
+  zmarshall@yahoo.com is a Control and instrumentation engineer
+  christopher35@yahoo.com is a Civil engineer, consulting
+  jacquelinedavid@hotmail.com is a Engineer, electronics
+  espinozadaryl@hill-maddox.com is a Engineering geologist
+  edwardsjacob@gmail.com is a Chemical engineer
+
+Wow, we found some contacts! Email them to learn about your job!
+```
 - `poetry run contactsearcher --job-description "engineer" --contacts-file input/contacts.txt`
 
-TODO: Use a fenced code block to provide the output for this command.
+```
+The contacts file contains 100 people in it! Let's get searching!
 
+  We are looking for contacts who have a job related to "neer":
+
+
+Wow, we found some contacts! Email them to learn about your job!
+```
 - `poetry run contactsearcher --job-description "neer" --contacts-file input/contacts.txt`
 
 ## Source Code and Configuration Files
@@ -26,9 +50,10 @@ TODO: Use a fenced code block to provide the output for this command.
 
 #### The source code statement that makes the `search` module available to `main`
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
-
+```
+from search import search_for_email_given_job
+```
+This import statement is taking the function from the search file and then I can use that function in the main file rather than going between both files.
 #### The source code statement that extracts the current job description for a contact
 
 TODO: Use a fenced code block to provide the requested source code
