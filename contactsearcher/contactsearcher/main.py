@@ -1,8 +1,13 @@
 """Define the command-line interface for the contact searching program."""
 
-# TODO: Add all of the required import statements to this module
+from pathlib import Path
 
-# TODO: create a Typer object to support the command-line interface
+import typer
+from rich.console import Console
+from search import search_for_email_given_job
+
+cli = typer.Typer()
+console = Console()
 
 
 @cli.command()
@@ -33,9 +38,7 @@ def contactsearcher(
     typer.echo(
         f'  We are looking for contacts who have a job related to "{job_description}":'
     )
-    # TODO: perform the search for all of the relevant email addresses given the job description
-    # TODO: we know that there are some contacts in the list, so iterate through the list of
-    # the contacts and display them in the terminal window
-    # TODO: display final information about the program's behavior in the terminal window;
-    # this should summarize whether or not the program found any matches
-    # TODO: refer to the expected output on Discord and/or Proactive Programmers for details
+    search_for_email_given_job(job_description, contacts_file)
+    for item in contact:
+        print(f"\n{contact}\n")
+    print("Wow, we found some contacts! Email them to learn about your job!")
