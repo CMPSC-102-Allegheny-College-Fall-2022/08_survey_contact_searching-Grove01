@@ -7,11 +7,11 @@ import csv
 # note: see https://docs.python.org/3/library/csv.html
 
 
-def search_for_email_given_job(job_description: str, contacts: str) -> List[List[str]]:
+def search_for_email_given_job(job_description: str, current_contact_job: str) -> List[List[str]]:
     """Search for and return job description(s) given an email address."""
     contact = []
     # iterate through the file, parsing it line by line
-    with open(f"{contacts}", "{job_description}") as a_file:
+    with open(f"{current_contact_job}", "{job_description}") as a_file:
         # iterate through each line of the file and extract the current job
         for line in a_file:
             contact.append(line.strip())
